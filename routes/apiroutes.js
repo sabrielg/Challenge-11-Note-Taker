@@ -13,8 +13,8 @@ router.post('/notes', (req, res) => {
     let newNote = {
         title: req.body.title,
         text: req.body.text
-     //    id:
     }
+    console.log(req.body)
     dataBase.push(newNote);
     fs.writeFileSync("./db/db.json", JSON.stringify(dataBase));
     res.json(newNote);
